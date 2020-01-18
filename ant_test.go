@@ -47,6 +47,78 @@ func TestStep(t *testing.T) {
 			},
 			nextAnt: Ant{3, 3, S},
 		},
+		testCase{
+			actualBoard: Board{
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+				{White, White, Black, Black, White},
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+			},
+			actualAnt: Ant{3, 3, S},
+			nextBoard: Board{
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+				{White, White, Black, Black, White},
+				{White, White, White, Black, White},
+				{White, White, White, White, White},
+			},
+			nextAnt: Ant{2, 3, W},
+		},
+		testCase{
+			actualBoard: Board{
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+				{White, White, Black, Black, White},
+				{White, White, White, Black, White},
+				{White, White, White, White, White},
+			},
+			actualAnt: Ant{2, 3, W},
+			nextBoard: Board{
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+				{White, White, Black, Black, White},
+				{White, White, Black, Black, White},
+				{White, White, White, White, White},
+			},
+			nextAnt: Ant{2, 2, N},
+		},
+		testCase{
+			actualBoard: Board{
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+				{White, White, Black, Black, White},
+				{White, White, Black, Black, White},
+				{White, White, White, White, White},
+			},
+			actualAnt: Ant{2, 2, N},
+			nextBoard: Board{
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+				{White, White, White, Black, White},
+				{White, White, Black, Black, White},
+				{White, White, White, White, White},
+			},
+			nextAnt: Ant{1, 2, W},
+		},
+		testCase{
+			actualBoard: Board{
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+				{White, White, White, Black, White},
+				{White, White, Black, Black, White},
+				{White, White, White, White, White},
+			},
+			actualAnt: Ant{1, 2, W},
+			nextBoard: Board{
+				{White, White, White, White, White},
+				{White, White, White, White, White},
+				{White, Black, White, Black, White},
+				{White, White, Black, Black, White},
+				{White, White, White, White, White},
+			},
+			nextAnt: Ant{1, 1, N},
+		},
 	}
 
 	for _, tc := range testCases {
